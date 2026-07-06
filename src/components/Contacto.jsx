@@ -69,24 +69,34 @@ function Contacto() {
     return nuevosErrores
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const nuevosErrores = validar()
-    setErrors(nuevosErrores)
+const handleSubmit = (e) => {
+  e.preventDefault()
+  const nuevosErrores = validar()
+  setErrors(nuevosErrores)
 
-    if (Object.keys(nuevosErrores).length === 0) {
-      setEnviado(true)
-      setFormData({
-        nombre: '',
-        email: '',
-        telefono: '',
-        empresa: '',
-        mensaje: '',
-      })
-      localStorage.removeItem('borradorContacto')
-      setTimeout(() => setEnviado(false), 5000)
+  if (Object.keys(nuevosErrores).length === 0) {
+
+    // Guardar el envío en el historial
+    const enviosGuardados = JSON.parse(localStorage.getItem('enviosContacto')) || []
+    const nuevoEnvio = {
+      ...formData,
+      fecha: new Date().toLocaleString('es-CL'),
     }
+    enviosGuardados.push(nuevoEnvio)
+    localStorage.setItem('enviosContacto', JSON.stringify(enviosGuardados))
+
+    setEnviado(true)
+    setFormData({
+      nombre: '',
+      email: '',
+      telefono: '',
+      empresa: '',
+      mensaje: '',
+    })
+    localStorage.removeItem('borradorContacto')
+    setTimeout(() => setEnviado(false), 5000)
   }
+}
 
   return (
     <section id="contacto" className="py-5 bg-dark text-white">
