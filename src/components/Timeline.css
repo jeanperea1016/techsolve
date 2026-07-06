@@ -1,0 +1,61 @@
+/* src/components/Timeline.css */
+
+/* Contenedor general. position: relative permite posicionar la línea vertical
+   respecto a este contenedor. */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;          /* centra el timeline horizontalmente */
+  padding: 20px 0;
+}
+
+/* LA LÍNEA VERTICAL.
+   Usamos ::before (un pseudo-elemento) para dibujar la línea sin agregar HTML extra.
+   Es una barra fina y alta posicionada a la izquierda. */
+.timeline::before {
+  content: '';                  /* obligatorio para que el pseudo-elemento exista */
+  position: absolute;
+  left: 20px;                   /* posición horizontal de la línea */
+  top: 0;
+  bottom: 0;
+  width: 3px;                   /* grosor de la línea */
+  background: #0d6efd;          /* azul (mismo primary de Bootstrap) */
+}
+
+/* Cada item del timeline. Le damos espacio a la izquierda para que el contenido
+   quede a la derecha de la línea, y margen abajo para separar los hitos. */
+.timeline-item {
+  position: relative;
+  padding-left: 60px;           /* empuja el contenido a la derecha de la línea */
+  margin-bottom: 40px;
+
+  /* ANIMACIÓN: cada item entra deslizándose desde la izquierda */
+  animation: slideInLeft 0.6s ease-out;
+}
+
+/* EL PUNTO de cada hito.
+   Otro pseudo-elemento (::before), un círculo azul posicionado sobre la línea. */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 12px;                   /* alineado con la línea (20px - mitad del punto) */
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background: #0d6efd;
+  border: 3px solid #fff;       /* borde blanco para que resalte */
+  border-radius: 50%;           /* lo hace círculo */
+  z-index: 1;                   /* asegura que el punto quede sobre la línea */
+}
+
+/* La animación de entrada: desde la izquierda e invisible, hasta su posición y visible. */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
