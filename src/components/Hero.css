@@ -1,0 +1,33 @@
+/* src/components/Hero.css */
+
+/* Le damos a la sección una altura mínima para que se vea imponente,
+   y usamos flexbox para centrar el contenido vertical y horizontalmente. */
+.hero-section {
+  min-height: 80vh;              /* 80% de la altura de la pantalla */
+  display: flex;
+  align-items: center;           /* centra verticalmente */
+  justify-content: center;       /* centra horizontalmente */
+}
+
+/* LA ANIMACIÓN CSS (requisito de tu tema) */
+
+/* @keyframes define una animación con nombre. Aquí "fadeInUp":
+   el contenido empieza invisible y 30px más abajo, y termina visible en su posición. */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;                  /* invisible al inicio */
+    transform: translateY(30px); /* desplazado 30px hacia abajo */
+  }
+  to {
+    opacity: 1;                  /* totalmente visible al final */
+    transform: translateY(0);    /* en su posición natural */
+  }
+}
+
+/* Aplicamos la animación al contenido del hero.
+   fadeInUp = nombre de la animación
+   1s       = dura 1 segundo
+   ease-out = arranca rápido y desacelera al final (se siente natural) */
+.hero-content {
+  animation: fadeInUp 1s ease-out;
+}
