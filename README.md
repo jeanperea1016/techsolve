@@ -1,16 +1,60 @@
-# React + Vite
+# TechSolve - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page corporativa para **TechSolve**, una consultora de TI que ofrece soluciones digitales integrales para empresas. Proyecto desarrollado como evaluación de Front-End.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** - Librería de interfaz de usuario
+- **Vite** - Herramienta de build y servidor de desarrollo
+- **React Compiler** - Optimización automática de componentes
+- **Bootstrap 5** - Framework de estilos y componentes responsivos
+- **CSS personalizado** - Animaciones y componentes a medida
 
-## React Compiler
+## ✨ Características
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Navbar corporativo responsivo con menú colapsable
+- Sección Hero con animación de entrada
+- Acordeones de servicios interactivos
+- Timeline del proceso de trabajo con CSS personalizado
+- Casos de éxito presentados en modales
+- Formulario de contacto con validaciones en tiempo real
+- Persistencia de borrador con localStorage
+- Diseño totalmente responsivo (móvil, tablet, desktop)
 
-## Expanding the ESLint configuration
+## 📦 Instalación
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Sigue estos pasos para ejecutar el proyecto localmente:
+
+1. Clona el repositorio:
+```bash
+   git clone https://github.com/TU_USUARIO/techsolve.git
+```
+
+2. Entra a la carpeta del proyecto:
+```bash
+   cd techsolve
+```
+
+3. Instala las dependencias:
+```bash
+   npm install
+```
+
+4. Inicia el servidor de desarrollo:
+```bash
+   npm run dev
+```
+
+5. Abre tu navegador en `http://localhost:5173`
+
+## 🏗️ Build para producción
+
+Para generar la versión optimizada:
+
+```bash
+npm run build
+```
+
+## 👤 Autor
+
+Jean Perea - Estudiante de Análisis de Programación, INACAP
