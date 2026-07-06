@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Servicios from './components/Servicios'
 import Timeline from './components/Timeline'
+import CasosEstudio from './components/CasosEstudio'
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <Hero />
       <Servicios />
       <Timeline />
-      {/* Aquí abajo irán: Casos, Contacto, Footer */}
+      <CasosEstudio />
+      {/* Aquí abajo irán: Contacto, Footer */}
     </div>
   )
 }
