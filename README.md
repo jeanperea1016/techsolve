@@ -2,6 +2,10 @@
 
 Landing page corporativa para **TechSolve**, una consultora de TI que ofrece soluciones digitales integrales para empresas. Proyecto desarrollado como evaluación de Front-End.
 
+## 🌐 Demo en vivo
+
+[https://techsolve-jeanperea.netlify.app](https://techsolve-jeanperea.netlify.app)
+
 ## 🚀 Tecnologías
 
 - **React 19** - Librería de interfaz de usuario
