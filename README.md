@@ -27,7 +27,7 @@ Sigue estos pasos para ejecutar el proyecto localmente:
 
 1. Clona el repositorio:
 ```bash
-   git clone https://github.com/TU_USUARIO/techsolve.git
+   git clone https://github.com/jeanperea1016/techsolve.git
 ```
 
 2. Entra a la carpeta del proyecto:
