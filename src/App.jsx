@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import Servicios from './components/Servicios'
 import Timeline from './components/Timeline'
 import CasosEstudio from './components/CasosEstudio'
+import Contacto from './components/Contacto'
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <Servicios />
       <Timeline />
       <CasosEstudio />
-      {/* Aquí abajo irán: Contacto, Footer */}
+      <Contacto />
+      {/* Falta solo: Footer */}
     </div>
   )
 }
