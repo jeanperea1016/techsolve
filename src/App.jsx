@@ -5,6 +5,7 @@ import Servicios from './components/Servicios'
 import Timeline from './components/Timeline'
 import CasosEstudio from './components/CasosEstudio'
 import Contacto from './components/Contacto'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Timeline />
       <CasosEstudio />
       <Contacto />
-      {/* Falta solo: Footer */}
+      <Footer />
     </div>
   )
 }
